@@ -9,7 +9,7 @@ public class AtbashCipher {
     }
 
     public String encode(String test) {
-        String[] stringArray = test.toLowerCase().split("(?!^)");
+        String[] stringArray = test.toLowerCase().replaceAll("\\s+","").split("(?!^)");
         String[] encodedArray = new String[stringArray.length];
         for (int l = 0; l < stringArray.length; l++){
             encodedArray[l] = cipher.get(stringArray[l]).toString();
@@ -18,8 +18,8 @@ public class AtbashCipher {
         return encodedString;
     }
 
-    public String decode(String gvhg){
-        return "";
-    }
+    public String decode(String test){
+       return encode(test);
+        }
 }
 

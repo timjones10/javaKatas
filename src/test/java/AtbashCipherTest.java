@@ -1,5 +1,4 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -19,7 +18,6 @@ public class AtbashCipherTest {
         assertEquals(cipher.encode("Test"), "gvhg");
     }
 
-    @Ignore
     @Test
     public void encodeMethodDecodesTextWithAtbashCipher(){
         assertEquals(cipher.decode("gvhg"), "test");
